@@ -1,0 +1,43 @@
+name: fed_learning_env
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  # Core Python and utilities
+  - python=3.10
+  - pip
+  - numpy
+  - pandas
+  - matplotlib
+  - seaborn
+  - scikit-learn
+  - tqdm 
+  - ipykernel
+  - nbformat
+
+  # Distributed learning tools
+  - xgboost
+  - dask 
+  - dask-ml
+  - grpcio
+  - pyarrow 
+
+  # Synthetic data tools
+  - sdv 
+  - copulas 
+  - faker 
+  - scipy
+  
+  # Data visualization
+  - plotly
+  - bokeh
+  
+  # Data storage and handling
+  - sqlalchemy 
+  - pyodbc
+  - sqlite
+
+  # Additional libraries via pip
+  - pip:
+      - xgboost-ray  # Distributed XGBoost using Ray
+      - wandb  # Experiment tracking and logging
