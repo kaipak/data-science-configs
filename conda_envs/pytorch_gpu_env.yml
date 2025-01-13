@@ -1,0 +1,46 @@
+name: pytorch_gpu_env
+channels:
+  - nvidia
+  - pytorch
+  - conda-forge
+dependencies:
+  # Core dependencies
+  - python=3.10
+  - pip
+  - cudatoolkit=11.8  # Match the version supported by your GPU and PyTorch
+  
+  # PyTorch with GPU support
+  - pytorch=2.0
+  - torchvision
+  - torchaudio
+
+  # Distributed training support (NCCL, Horovod, etc.)
+  - nccl
+  - horovod
+
+  # Machine learning and deep learning utilities
+  - scikit-learn
+  - scipy
+  - numpy
+  - pandas
+  - matplotlib
+  - seaborn
+
+  # Visualization tools
+  - tensorboard
+  - matplotlib
+  - tqdm  # Progress bars for training
+
+  # Additional libraries for model deployment
+  - onnx
+  - onnxruntime-gpu  # For running ONNX models with GPU
+  - pycuda           # Python bindings for CUDA
+  
+  # Install pip packages for additional tools
+  - pip:
+      - transformers  # Hugging Face models
+      - datasets      # Hugging Face datasets
+      - accelerate    # Hugging Face distributed training
+      - wandb         # Experiment tracking
+      - pytorch-lightning  # High-level PyTorch API
+      - torchmetrics  # Metrics for PyTorch

@@ -1,0 +1,72 @@
+name: jupyter_env
+channels:
+  - conda-forge
+dependencies:
+  # Core Python and Jupyter
+  - python=3.10
+  - jupyterlab
+  - notebook
+  - ipykernel
+  - nb_conda_kernels  # Detect kernels from other Conda environments
+
+  # Data Manipulation and Analysis
+  - numpy
+  - pandas
+  - scipy
+  - dask  
+
+  # Data Visualization
+  - matplotlib
+  - seaborn
+  - plotly
+  - bokeh
+  - holoviews
+
+  # Machine Learning
+  - scikit-learn
+  - xgboost
+  - lightgbm
+
+  # Notebook Extensions
+  - jupyter_contrib_nbextensions
+  - jupyterlab_widgets
+  - ipywidgets  # Interactive widgets in notebooks
+
+  # Version Control and Collaboration
+  - git
+  - nbdime  # Diffing and merging notebooks
+
+  # Utilities
+  - tqdm 
+  - pyyaml
+  - requests  
+  - beautifulsoup4  
+
+  # Database and I/O
+  - sqlalchemy 
+  - psycopg2 
+  - openpyxl
+
+  # Geospatial
+  - geopandas
+  - folium
+  - pyproj
+
+  # Advanced Data Analysis
+  - statsmodels  # Statistical models
+  - numba  # JIT compiler for Python
+
+  # Image Processing
+  - pillow
+  - opencv
+  - scikit-image
+
+  # Install pip for additional libraries
+  - pip
+
+  # Install additional libraries via pip
+  - pip:
+      - jupytext  
+      - streamlit
+      - pyarrow 
+      - fastparquet
